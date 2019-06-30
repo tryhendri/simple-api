@@ -1,4 +1,4 @@
 {
-    "connectionString": "mongodb+srv://jenius-test:ZXasqw12@cluster0-vxexc.mongodb.net/test?retryWrites=true&w=majority",
+    "connectionString": "mongodb://localhost:27017/simple-api",
     "secret": "ZXasqw12!@"
 }

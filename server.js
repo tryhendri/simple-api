@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 
 const jwt = require("./helpers/jwt");
 const errorHandler = require("./helpers/error-handler");
-const routes = require("./routes");
 
 const app = express();
 

@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "623a0d64-5198-4324-9042-87249c6b76f9",
+		"name": "simple-api-jenius",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "auth register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Admin1234\",\n\t\"password\": \"12345678\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/auth/authenticate",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "List user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"12345678\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"testupdate\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/5d15e21dc190723ecc5105db",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"5d15e21dc190723ecc5105db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"aggagagag\",\n    \"accountNumber\": \"123231\",\n    \"emailAddress\": \"jejejeje@gmail.com\",\n    \"identityNumber\": \"12131233\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/5d15e21dc190723ecc5105db",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"5d15e21dc190723ecc5105db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/5d15e1e9c5482636d51e4707",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"5d15e1e9c5482636d51e4707"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find by key name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZDE1ZTIzMTMzNTNiZjQyNjJlMWVlOTUiLCJpYXQiOjE1NjE3NjA0MDN9.Z-1wWrNW-982sohPfFyeLaqOsiN9TJgJBZaPcoDgSio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyName\" : \"accountNumber\",\n\t\"keyValue\" : \"123231\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/user/keyname",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"keyname"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "user"
+		}
+	]
+}
